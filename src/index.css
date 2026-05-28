@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,600,700,800,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Variables ──────────────────────────────────────── */
+:root {
+  --brand:        #2563eb;
+  --brand-light:  #3b82f6;
+  --brand-dark:   #1d4ed8;
+  --coral:        #FF6B6B;
+  --navy:         #11172c;
+  --navy-dark:    #0a0f1e;
+  --text-primary: #0f172a;
+  --text-muted:   #64748b;
+  --border:       #e2e8f0;
+  --bg-subtle:    #f8fafc;
+  --radius:       0.75rem;
+  --radius-lg:    1rem;
+  --radius-xl:    1.5rem;
+  --shadow-card:  0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(0,0,0,.06);
+  --shadow-hover: 0 4px 8px rgba(0,0,0,.08), 0 16px 40px rgba(0,0,0,.12);
+}
+
+/* ── Base ────────────────────────────────────────────────── */
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Sora', sans-serif;
+  color: var(--text-primary);
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* ── Typography ──────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cabinet Grotesk', 'Sora', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.hero-headline {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+}
+
+.section-headline {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* ── Layout ──────────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container { padding: 0 2.5rem; }
+}
+
+@media (min-width: 1280px) {
+  .container { padding: 0 3rem; }
+}
+
+/* ── Section spacing ────────────────────────────────────── */
+.section { padding: 5rem 0; }
+.section-lg { padding: 7rem 0; }
+
+@media (max-width: 768px) {
+  .section { padding: 3.5rem 0; }
+  .section-lg { padding: 4.5rem 0; }
+}
+
+/* ── Components ──────────────────────────────────────────── */
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2
+    px-6 py-3 rounded-full text-sm font-semibold
+    bg-brand-600 text-white
+    hover:bg-brand-700 active:scale-95
+    transition-all duration-200
+    shadow-sm hover:shadow-glow-sm;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2
+    px-6 py-3 rounded-full text-sm font-semibold
+    border-2 border-brand-600 text-brand-600
+    hover:bg-brand-600 hover:text-white active:scale-95
+    transition-all duration-200;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center gap-2
+    px-5 py-2.5 rounded-full text-sm font-medium
+    text-gray-600 hover:text-brand-600 hover:bg-brand-50
+    transition-all duration-200;
+}
+
+.card {
+  @apply bg-white rounded-xl2 border border-gray-100
+    shadow-card hover:shadow-card-hover
+    transition-all duration-400;
+}
+
+.badge {
+  @apply inline-flex items-center gap-1.5 px-3 py-1
+    rounded-full text-xs font-medium;
+}
+
+/* ── Gradient text ───────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-coral {
+  background: linear-gradient(135deg, #FF6B6B 0%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Prose (rich text from API) ────────────────────────── */
+.prose-devsoft {
+  @apply text-gray-700 leading-relaxed;
+}
+.prose-devsoft h2 { @apply text-2xl font-bold text-gray-900 mt-10 mb-4; }
+.prose-devsoft h3 { @apply text-xl font-semibold text-gray-900 mt-8 mb-3; }
+.prose-devsoft p  { @apply mb-4 leading-7; }
+.prose-devsoft ul { @apply list-disc list-inside mb-4 space-y-1; }
+.prose-devsoft ol { @apply list-decimal list-inside mb-4 space-y-1; }
+.prose-devsoft li { @apply text-gray-700; }
+.prose-devsoft a  { @apply text-brand-600 hover:text-brand-700 underline; }
+.prose-devsoft blockquote { @apply border-l-4 border-brand-300 pl-4 italic text-gray-600 my-6; }
+.prose-devsoft code { @apply bg-gray-100 text-brand-700 px-1.5 py-0.5 rounded text-sm font-mono; }
+.prose-devsoft pre { @apply bg-gray-900 text-gray-100 p-4 rounded-xl overflow-x-auto my-6; }
+.prose-devsoft img { @apply rounded-xl w-full my-6; }
+.prose-devsoft strong { @apply font-semibold text-gray-900; }
+
+/* ── Animations ──────────────────────────────────────────── */
+.animate-in { opacity: 0; }
+.animate-in.visible { animation: fadeUp 0.6s ease forwards; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+/* ── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* ── Loading skeleton ────────────────────────────────────── */
+.skeleton {
+  @apply bg-gray-200 rounded animate-pulse;
+}
+
+/* ── Focus visible ───────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* ── Marquee ─────────────────────────────────────────────── */
+.marquee-track { display: flex; width: max-content; }
+.marquee-track.animate { animation: marquee 30s linear infinite; }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── Hero gradient background ────────────────────────────── */
+.hero-gradient {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(37,99,235,0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 90% 20%, rgba(124,58,237,0.1) 0%, transparent 50%),
+    #ffffff;
+}
+
+.hero-gradient-dark {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(37,99,235,0.3) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 90% 20%, rgba(124,58,237,0.2) 0%, transparent 50%),
+    #0a0f1e;
+}
+
+/* ── Noise texture overlay ───────────────────────────────── */
+.noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* ── Image aspect ratios ─────────────────────────────────── */
+.aspect-card    { aspect-ratio: 16 / 10; }
+.aspect-project { aspect-ratio: 16 / 9; }
+.aspect-portrait{ aspect-ratio: 3 / 4; }

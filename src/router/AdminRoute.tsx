@@ -1,0 +1,11 @@
+// ─────────────────────────────────────────────────────────────
+// src/router/AdminRoute.tsx
+// ─────────────────────────────────────────────────────────────
+import { Navigate } from 'react-router-dom'
+import { useAuthStore } from '@/store/authStore'
+ 
+export default function AdminRoute({ children }: { children: React.ReactNode }) {
+  const { isAuthenticated } = useAuthStore()
+  if (!isAuthenticated) return <Navigate to="/admin/login" replace />
+  return <>{children}</>
+}
