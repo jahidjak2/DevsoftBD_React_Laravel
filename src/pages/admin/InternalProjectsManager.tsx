@@ -462,14 +462,14 @@ export default function InternalProjectsManager() {
                   </FormField>
                 </div>
                 <div className="grid grid-cols-3 gap-4">
-                  <FormField label="Budget" className="col-span-2">
+                  {/* <FormField label="Budget" className="col-span-2">
                     <FormInput {...register('budget')} type="number" placeholder="50000" />
-                  </FormField>
-                  {/* <div className="col-span-2">
+                  </FormField> */}
+                  <div className="col-span-2">
                     <FormField label="Budget">
                       <FormInput {...register('budget')} type="number" placeholder="50000" />
                     </FormField>
-                  </div> */}
+                  </div>
                   <FormField label="Currency">
                     <FormSelect {...register('currency')}>
                       {['BDT','USD','EUR','GBP','AED'].map(c => <option key={c} value={c}>{c}</option>)}

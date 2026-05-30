@@ -6,9 +6,9 @@ import { ArrowLeft, ExternalLink, Github, BookOpen, Calendar, Clock, Users, Glob
 import Lightbox from 'yet-another-react-lightbox'
 import 'yet-another-react-lightbox/styles.css'
 import { useState } from 'react'
-import { useProject, useIncrementView } from '@/hooks/all_hooks'
-import { TagBadge } from '@/components/shared/SharedComponents'
-import { SkeletonText } from '@/components/shared/SharedComponents'
+import { useProject, useIncrementView } from '@/hooks/useProjects'
+import { TagBadge } from '@/components/shared/TagBadge'
+import { SkeletonText } from '@/components/shared/SkeletonCard'
 import { ProjectCard } from './Projects'
 import { cn } from '@/lib/utils'
 
@@ -151,7 +151,7 @@ export default function ProjectDetail() {
                     Screenshots & Gallery
                   </h2>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    {project.images.map((img, idx) => (
+                  {project.images.map((img, idx) => (
                       <button
                         key={img.id}
                         onClick={() => setLightboxIndex(idx)}
@@ -165,9 +165,7 @@ export default function ProjectDetail() {
                       </button>
                     ))}
                   </div>
-                  {img.caption && (
-                    <p className="text-xs text-gray-400 text-center mt-2">Click any image to enlarge</p>
-                  )}
+                  <p className="text-xs text-gray-400 text-center mt-2">Click any image to enlarge</p>
                 </div>
               )}
 

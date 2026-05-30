@@ -48,7 +48,7 @@ const EmployeeDashboard = lazy(() => import('@/pages/employee/Dashboard'))
 const EmployeeProfile   = lazy(() => import('@/pages/employee/Profile'))
 const MyProjects        = lazy(() => import('@/pages/employee/MyProjects'))
 const MyTasks           = lazy(() => import('@/pages/employee/MyTasks'))
-const MyLeave           = lazy(() => import('@/pages/employee/LeaveRequests'))
+// const MyLeave           = lazy(() => import('@/pages/employee/LeaveRequests'))
  
 // ── Route guards ─────────────────────────────────────────────
 import AdminRoute    from './AdminRoute'
@@ -122,7 +122,7 @@ export const router = createBrowserRouter([
       { path: 'profile',    element: wrap(<EmployeeProfile />) },
       { path: 'projects',   element: wrap(<MyProjects />) },
       { path: 'tasks',      element: wrap(<MyTasks />) },
-      { path: 'leave',      element: wrap(<MyLeave />) },
+      // { path: 'leave',      element: wrap(<MyLeave />) },
     ],
   },
 ])

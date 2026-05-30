@@ -1,10 +1,12 @@
 
+import { Helmet } from 'react-helmet-async'
+
 // ─────────────────────────────────────────────────────────────
 // src/pages/public/ServiceDetail.tsx
 // ─────────────────────────────────────────────────────────────
 import { useParams } from 'react-router-dom'
-import { useService } from '@/hooks/all_hooks'
-import { CheckCircle, ChevronDown, ChevronUp } from 'lucide-react'
+import { useService } from '@/hooks/useServices'
+import { CheckCircle, ChevronDown, ChevronUp, Link } from 'lucide-react'
 import { useState } from 'react'
  
 export function ServiceDetail() {

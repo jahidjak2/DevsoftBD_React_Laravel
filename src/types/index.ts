@@ -75,6 +75,7 @@ export interface Project {
   tech_tags: Tag[]
 }
 
+
 export interface ProjectImage {
   id: number
   image_url: string

@@ -6,9 +6,12 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { toast } from 'sonner'
-import { useSubmitContact } from '@/hooks/all_hooks'
+// Update the import path below to the correct location of useSubmitContact
+import { useSubmitContact } from '@/hooks/useContact'
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react'
 import type { ContactFormData } from '@/types'
+import { Helmet } from 'react-helmet-async'
+import { cn } from '@/lib/utils'
  
 const schema = z.object({
   name:             z.string().min(2, 'Name must be at least 2 characters'),

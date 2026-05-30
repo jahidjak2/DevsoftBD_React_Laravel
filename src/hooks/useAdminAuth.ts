@@ -1,3 +1,5 @@
+import { useMutation } from '@tanstack/react-query';
+
 // src/hooks/useAdminAuth.ts
 export function useAdminLogin() {
   return useMutation({

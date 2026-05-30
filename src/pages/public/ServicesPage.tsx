@@ -2,8 +2,8 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { ArrowRight } from 'lucide-react'
-import { useServices } from '@/hooks/all_hooks'
-import { SkeletonCard } from '@/components/shared/SharedComponents'
+import { useServices } from '@/hooks/useServices'
+import { SkeletonCard } from '@/components/shared/SkeletonCard'
 import { cn } from '@/lib/utils'
  
 export default function ServicesPage() {

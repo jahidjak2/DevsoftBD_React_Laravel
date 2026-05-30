@@ -1,14 +1,14 @@
 // src/components/sections/Hero.tsx
 import { Link } from 'react-router-dom'
 import { ArrowRight, Play, Star } from 'lucide-react'
-import { useInView } from '@/hooks/all_hooks'
+import { useInView } from '@/hooks/useInView'
 import { cn } from '@/lib/utils'
 import type { Hero as HeroType } from '@/types'
  
 interface Props { hero: HeroType }
  
 export default function Hero({ hero }: Props) {
-  const { ref, inView } = useInView(0.1)
+  const { ref, inView } = useInView({ threshold: 0.1 })
  
   return (
     <section ref={ref} className="relative min-h-[92vh] flex items-center overflow-hidden hero-gradient">

@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             LeaveTypeSeeder::class,
             TagSeeder::class,
             DemoContentSeeder::class,
+            EmployeeUserSeeder::class,
         ]);
     }
 }

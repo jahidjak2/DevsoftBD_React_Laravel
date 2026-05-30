@@ -1,6 +1,9 @@
 
 // ─────────────────────────────────────────────────────────────
 // src/pages/public/About.tsx
+
+import { Helmet } from "react-helmet-async"
+
 // ─────────────────────────────────────────────────────────────
 export function About() {
   return (

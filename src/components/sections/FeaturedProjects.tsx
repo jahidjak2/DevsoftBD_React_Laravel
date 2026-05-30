@@ -2,8 +2,11 @@
 // ─────────────────────────────────────────────────────────────
 // src/components/sections/FeaturedProjects.tsx
 // ─────────────────────────────────────────────────────────────
-import { ExternalLink } from 'lucide-react'
+import { ArrowRight, Code2, ExternalLink, Link } from 'lucide-react'
 import type { Project } from '@/types'
+import { SectionHeader } from '../shared/SectionHeader'
+import { useInView } from 'react-intersection-observer'
+import { cn } from '@/lib/utils'
  
 interface FeaturedProjectsProps { projects: Project[] }
  

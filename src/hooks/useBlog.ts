@@ -1,3 +1,6 @@
+import { publicApi } from "@/lib/api";
+import { useQuery } from "@tanstack/react-query";
+
 // src/hooks/useBlog.ts
 export function useBlogPosts(params?: { category?: string; page?: number }) {
   return useQuery({

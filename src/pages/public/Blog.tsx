@@ -2,8 +2,11 @@
 // ─────────────────────────────────────────────────────────────
 // src/pages/public/Blog.tsx
 // ─────────────────────────────────────────────────────────────
-import { useBlogPosts } from '@/hooks/all_hooks'
+import { SkeletonCard } from '@/components/shared/SkeletonCard'
+import { useBlogPosts } from '@/hooks/useBlog'
 import type { BlogPost } from '@/types'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
  
 export function Blog() {
   const { data, isLoading } = useBlogPosts()

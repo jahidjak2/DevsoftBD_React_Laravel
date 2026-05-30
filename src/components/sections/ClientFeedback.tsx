@@ -4,6 +4,9 @@
 // ─────────────────────────────────────────────────────────────
 import { Star } from 'lucide-react'
 import type { Testimonial } from '@/types'
+import { useInView } from 'react-intersection-observer'
+import { cn } from '@/lib/utils'
+import { SectionHeader } from '../shared/SectionHeader'
  
 interface FeedbackProps { testimonials: Testimonial[] }
  

@@ -1,10 +1,12 @@
-
+import { Helmet } from 'react-helmet-async'
 // ─────────────────────────────────────────────────────────────
 // src/pages/public/Events.tsx
 // ─────────────────────────────────────────────────────────────
 import { useQuery } from '@tanstack/react-query'
 import { publicApi } from '@/lib/api'
 import { Calendar, MapPin, Video, Users } from 'lucide-react'
+import { EmptyState } from '@/components/shared/EmptyState'
+import { cn } from '@/lib/utils'
  
 export function Events() {
   const { data, isLoading } = useQuery({

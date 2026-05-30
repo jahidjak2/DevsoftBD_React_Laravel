@@ -1,3 +1,6 @@
+import { publicApi } from "@/lib/api";
+import { useQuery } from "@tanstack/react-query";
+
 // src/hooks/useSiteSettings.ts
 export function useSiteSettings() {
   // Settings are included in the homepage data.

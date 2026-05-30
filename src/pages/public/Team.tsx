@@ -1,8 +1,8 @@
-
+import { Helmet } from 'react-helmet-async'
 // ─────────────────────────────────────────────────────────────
 // src/pages/public/Team.tsx
 // ─────────────────────────────────────────────────────────────
-import { useTeam } from '@/hooks/all_hooks'
+import { useTeam } from '@/hooks/useTeam'
 import { Linkedin, Github, Twitter } from 'lucide-react'
 import type { TeamMember } from '@/types'
  

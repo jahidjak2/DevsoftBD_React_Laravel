@@ -2,7 +2,10 @@
 // ─────────────────────────────────────────────────────────────
 // src/components/sections/WhyChooseUs.tsx
 // ─────────────────────────────────────────────────────────────
+import useInView from '@/hooks/useInView'
 import type { WhyReason } from '@/types'
+import { SectionHeader } from '../shared/SectionHeader'
+import { cn } from '@/lib/utils'
  
 interface WhyProps { reasons: WhyReason[] }
  

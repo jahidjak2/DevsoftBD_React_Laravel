@@ -2,7 +2,10 @@
 // ─────────────────────────────────────────────────────────────
 // src/pages/public/BlogPost.tsx
 // ─────────────────────────────────────────────────────────────
-import { useBlogPost } from '@/hooks/all_hooks'
+import { useBlogPost } from '@/hooks/useBlog'
+import { ArrowLeft } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
+import { Link, useParams } from 'react-router-dom'
  
 export function BlogPost() {
   const { slug } = useParams<{ slug: string }>()

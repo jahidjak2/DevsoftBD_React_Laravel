@@ -71,7 +71,7 @@ export default function SiteSettings() {
       }, {})
     : {}
 
-  const { register, handleSubmit, setValue, watch, reset } = useForm({ defaultValues: flatSettings })
+  const { register, handleSubmit, setValue, watch, reset } = useForm<Record<string, string>>({ defaultValues: {} })
 
   useEffect(() => { if (flatSettings && Object.keys(flatSettings).length > 0) reset(flatSettings) }, [JSON.stringify(flatSettings)])
 

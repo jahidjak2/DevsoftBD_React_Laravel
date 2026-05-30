@@ -4,9 +4,10 @@
 // ─────────────────────────────────────────────────────────────
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-import { useInView } from '@/hooks/all_hooks'
+import { useInView } from '@/hooks/useInView'
 import { cn } from '@/lib/utils'
 import type { ServiceItem } from '@/types'
+import { SectionHeader } from '../shared/SectionHeader'
  
 const ICON_COLORS = [
   'from-blue-500 to-blue-600',

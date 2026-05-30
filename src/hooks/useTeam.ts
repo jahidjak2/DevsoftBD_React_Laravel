@@ -1,3 +1,6 @@
+import { publicApi } from "@/lib/api";
+import { useQuery } from "@tanstack/react-query";
+
 // src/hooks/useTeam.ts
 export function useTeam() {
   return useQuery({

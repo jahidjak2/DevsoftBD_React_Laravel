@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react'
+import { Navigate } from 'react-router-dom'
 
 // ─────────────────────────────────────────────────────────────
 // src/router/EmployeeRoute.tsx
